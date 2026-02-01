@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "zig",
+      "args": [
+        "c++",
+        "${workspaceFolder}\\src\\main.cpp",       // source first
+        "-I'F:\\PRACTICE\\raylib\\include'",  // includes
+        "F:\\PRACTICE\\raylib\\zig-out\\lib\\raylib.lib", // raylib static lib
+        "-lopengl32",
+        "-lgdi32",
+        "-lwinmm",
+        "-o",
+        "${workspaceFolder}\\build-out\\main.exe" // output last
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
